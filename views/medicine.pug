@@ -2,10 +2,9 @@ extends layout.pug
 
 block content 
     .pagecontent 
-        h1 All Medicine 
+        h1.medPage All Medicine 
 
         each medicine in medicines 
             .medicine-show
                 a.med(href="#")= medicine 
-                a.udate(href="#") update
                 a.delete(href="#") delete

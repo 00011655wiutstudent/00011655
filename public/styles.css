@@ -11,7 +11,10 @@ a{
     text-decoration: none;
     color: #000;
 }
-
+h1{
+    font-weight: 500;
+    text-transform: uppercase;
+}
 /*Header*/
 .navbar{
     max-width: 1000px;
@@ -34,6 +37,7 @@ a{
 }
 .nav a{
     margin-left: 15px;
+    text-transform: uppercase;
 }
 
 /*This will be line under my navigation menu and I am using webkit so, 
@@ -51,14 +55,14 @@ there won't be any issues with tranformation in different brousers*/
     color: 	#c99200;
 }
 .nav a:nth-child(1):hover ~ .hoverline {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(60px);
+    transform: translateX(60px);
     opacity: 1;
 }
 /*for each a in menu I am assigning hoverline and cordinating where it will stay*/
 .nav a:nth-child(2):hover ~ .hoverline {
-    -webkit-transform: translateX(155px);
-    transform: translateX(155px);
+    -webkit-transform: translateX(200px);
+    transform: translateX(200px);
     opacity: 1;
 }
 
@@ -74,6 +78,7 @@ there won't be any issues with tranformation in different brousers*/
     padding: 50px 0;
     max-width: 60%;
     font-size: 2rem;
+    text-transform:initial;
 }
 
 .btnCreate{
@@ -124,4 +129,35 @@ there won't be any issues with tranformation in different brousers*/
 .btn:hover{
     background-color: rgb(51, 41, 12);
     color: white;
+}
+
+/*Medicine Page*/
+.medPage{
+    margin: 30px 0 20px 20px;
+}
+.medicine-show{
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    padding: 10px;
+    border-bottom: 1px solid #c99200;
+    align-items: center;
+}
+
+.med{
+    font-size: 1.3rem;
+    color: #000;
+}
+.med:hover{
+    color: #c99200;
+}
+
+.delete{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #c99200;
+    border-radius: 25px;
+    font-family: inherit;
+    border: none;
+
 }
