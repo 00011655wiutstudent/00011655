@@ -1,3 +1,63 @@
-h1{
-    color:blue;
+
+:root{
+    font-size: 16px;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+/*Header*/
+.navbar{
+    max-width: 1000px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom:1px solid #c99200 ;
+}
+
+.navbar a:hover{
+    color: 	#c99200;
+}
+
+.nav{
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 20px 15px;
+}
+.nav a{
+    margin-left: 15px;
+}
+
+.nav .hoverline {
+    width: 30px;
+    height: 2px;
+    border-radius: 20%;
+    background-color: 	#c99200;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    opacity: 0;
+}
+.nav a:hover{
+    color: 	#c99200;
+}
+.nav a:nth-child(1):hover ~ .hoverline {
+    -webkit-transform: translateX(50px);
+    transform: translateX(50px);
+    opacity: 1;
+}
+
+.nav a:nth-child(2):hover ~ .hoverline {
+    -webkit-transform: translateX(155px);
+    transform: translateX(155px);
+    opacity: 1;
+}
+
+/*Home Page*/
+
