@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
+const fs = require('fs')
 
 const PORT = process.env.PORT || 5000
 app.set('view engine', 'pug')
 app.use('/static', express.static('public'))
+app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res) =>{
     res.render('index')
@@ -12,6 +14,7 @@ app.get('/', (req, res) =>{
 app.get('/add', (req, res) =>{
     res.render('add')
 })
+
 
 const med = ['medicine1', 'tue']
 
