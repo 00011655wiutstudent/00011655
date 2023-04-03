@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000
 app.set('view engine', 'pug')
 
 app.get('/', (req, res) =>{
-    res.send("hi")
+    res.render('index')
 })
 
 
