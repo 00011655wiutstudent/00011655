@@ -11,6 +11,7 @@ a{
     text-decoration: none;
     color: #000;
 }
+
 /*Header*/
 .navbar{
     max-width: 1000px;
@@ -35,6 +36,8 @@ a{
     margin-left: 15px;
 }
 
+/*This will be line under my navigation menu and I am using webkit so, 
+there won't be any issues with tranformation in different brousers*/
 .nav .hoverline {
     width: 30px;
     height: 2px;
@@ -52,7 +55,7 @@ a{
     transform: translateX(50px);
     opacity: 1;
 }
-
+/*for each a in menu I am assigning hoverline and cordinating where it will stay*/
 .nav a:nth-child(2):hover ~ .hoverline {
     -webkit-transform: translateX(155px);
     transform: translateX(155px);
@@ -60,4 +63,29 @@ a{
 }
 
 /*Home Page*/
+.homecontent{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.cw11655{
+    padding-top: 50px;
+    max-width: 60%;
+    font-size: 2rem;
+}
+
+.btnCreate{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #c99200;
+    border-radius: 25px;
+    margin: 30px auto;
+}
+
+.btnCreate:hover{
+    background-color: rgb(51, 41, 12);
+    color: white;
+}
+
 
