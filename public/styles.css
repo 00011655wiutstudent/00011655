@@ -62,15 +62,16 @@ there won't be any issues with tranformation in different brousers*/
     opacity: 1;
 }
 
-/*Home Page*/
-.homecontent{
+.pagecontent{
     max-width: 1000px;
     margin: 0 auto;
     padding: 15px;
 }
+/*page content will be used by other pages as well*/
 
+/*Home Page*/
 .cw11655{
-    padding-top: 50px;
+    padding: 50px 0;
     max-width: 60%;
     font-size: 2rem;
 }
@@ -81,6 +82,7 @@ there won't be any issues with tranformation in different brousers*/
     background-color: #c99200;
     border-radius: 25px;
     margin: 30px auto;
+    font-family: inherit;
 }
 
 .btnCreate:hover{
@@ -88,4 +90,38 @@ there won't be any issues with tranformation in different brousers*/
     color: white;
 }
 
+/*Add page*/
 
+.addpage{
+    margin: 20px 0;
+}
+
+
+.form{
+    max-width: 60%;
+}
+
+.input{
+    width: 800px;
+    display: block;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 1px solid #c99200;
+    margin: 10px auto;
+}
+
+button{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #c99200;
+    border-radius: 25px;
+    margin: 30px auto;
+    font-family: inherit;
+    border: none;
+}
+
+
+button:hover{
+    background-color: rgb(51, 41, 12);
+    color: white;
+}

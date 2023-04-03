@@ -1,0 +1,14 @@
+extends layout.pug 
+
+block content 
+    .pagecontent 
+        h1.addpage Add Medicine 
+        form.form(action='/add', method='POST')
+            label Title 
+            input.input(type="text" name="title")
+
+            label Details
+            textarea.input(name="details") 
+
+            button Add Medicine
+

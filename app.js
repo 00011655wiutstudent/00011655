@@ -9,6 +9,9 @@ app.get('/', (req, res) =>{
     res.render('index')
 })
 
+app.get('/add', (req, res) =>{
+    res.render('add')
+})
 
 app.listen(PORT, err =>{
     if (err)
