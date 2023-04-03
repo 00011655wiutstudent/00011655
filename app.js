@@ -48,10 +48,14 @@ app.post('/add', (req, res) =>{
 })
 
 
-const med = ['medicine1', 'tue']
-
 app.get('/medicine', (req, res) =>{
-    res.render('medicine', {medicines: med})
+
+    fs.readFile('./data/medicines.json', (err, data) =>{
+        if (err){throw err}
+    
+        const medicines = JSON.parse(data)
+        res.render('medicine', {medicines: medicines})
+    })
 })
 
 app.get('/medicine/detail', (req, res)=>{

@@ -4,7 +4,7 @@ block content
     .pagecontent 
         h1.medPage All Medicine 
 
-        each medicine in medicines 
+        each medicine in medicines
             .medicine-show
-                a.med(href="/medicine/detail")= medicine 
+                a.med(href=`/medicine/${medicine.name}`) #{medicine.name} 
                 a.delete(href="#") delete
