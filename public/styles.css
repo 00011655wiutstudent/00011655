@@ -133,7 +133,7 @@ there won't be any issues with tranformation in different brousers*/
 
 /*Medicine Page*/
 .medPage{
-    margin: 30px 0 20px 20px;
+    margin: 30px 0 20px 10px;
 }
 .medicine-show{
     display: flex;
@@ -159,5 +159,14 @@ there won't be any issues with tranformation in different brousers*/
     border-radius: 25px;
     font-family: inherit;
     border: none;
+}
 
+/*Detail page*/
+.title{
+    margin: 30px 0;
+    color: #c99200;
+}
+
+.description{
+    font-size: 1.3rem;
 }

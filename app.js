@@ -19,6 +19,9 @@ app.get('/medicine', (req, res) =>{
     res.render('medicine', {medicines: med})
 })
 
+app.get('/medicine/detail', (req, res)=>{
+    res.render('detail')
+})
 app.listen(PORT, err =>{
     if (err)
         console.log(err)
