@@ -110,7 +110,7 @@ there won't be any issues with tranformation in different brousers*/
     margin: 10px auto;
 }
 
-button{
+.btn{
     display: inline-block;
     padding: 10px 25px;
     background-color: #c99200;
@@ -121,7 +121,7 @@ button{
 }
 
 
-button:hover{
+.btn:hover{
     background-color: rgb(51, 41, 12);
     color: white;
 }

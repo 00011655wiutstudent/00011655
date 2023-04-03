@@ -13,6 +13,12 @@ app.get('/add', (req, res) =>{
     res.render('add')
 })
 
+const med = ['medicine1', 'tue']
+
+app.get('/medicine', (req, res) =>{
+    res.render('medicine', {medicines: med})
+})
+
 app.listen(PORT, err =>{
     if (err)
         console.log(err)

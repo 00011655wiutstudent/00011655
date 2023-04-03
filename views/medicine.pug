@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content 
+    .pagecontent 
+        h1 All Medicine 
+
+        each medicine in medicines 
+            .medicine-show
+                a.med(href="#")= medicine 
+                a.udate(href="#") update
+                a.delete(href="#") delete
