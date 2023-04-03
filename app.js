@@ -24,6 +24,27 @@ app.post('/add', (req, res) =>{
     else if(detail.trim()===""){
         res.render('add', {error: true})
     }
+
+    else{
+        fs.readFile('./data/medicines.json', (err, data) =>{
+            if (err) throw err
+            const medics = JSON.parse(data)
+
+            medics.push({
+                id: id (),
+                name: title,
+                description: detail,
+            })
+            fs.writeFile('./data/medicines.json', JSON.stringify(medics), err =>{
+                if (err){throw err}
+
+                res.render('add', {success: true})
+            })
+
+        })
+
+    }
+
 })
 
 
@@ -41,3 +62,8 @@ app.listen(PORT, err =>{
         console.log(err)
     console.log(`App is running on port ${PORT}`)
 })
+
+function id() {
+    return (Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase()
+    // the code was taken from user Ken Ng
+  };
