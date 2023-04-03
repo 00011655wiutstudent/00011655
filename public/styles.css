@@ -131,6 +131,11 @@ there won't be any issues with tranformation in different brousers*/
     color: white;
 }
 
+.error{
+    display: inline-block;
+    color: red;
+    font-size: 1.3rem;
+}
 /*Medicine Page*/
 .medPage{
     margin: 30px 0 20px 10px;

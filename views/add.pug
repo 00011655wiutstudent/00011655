@@ -3,6 +3,8 @@ extends layout.pug
 block content 
     .pagecontent 
         h1.addpage Add Medicine 
+        if error 
+            p.error Please, fill out the form before saving
         form.form(action='/add', method='POST')
             label Title 
             input.input(type="text" name="title")

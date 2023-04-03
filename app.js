@@ -15,6 +15,17 @@ app.get('/add', (req, res) =>{
     res.render('add')
 })
 
+app.post('/add', (req, res) =>{
+    const title = req.body.title
+    const detail = req.body.details
+    if(title.trim() ===""){
+        res.render('add', {error: true})
+    }
+    else if(detail.trim()===""){
+        res.render('add', {error: true})
+    }
+})
+
 
 const med = ['medicine1', 'tue']
 
