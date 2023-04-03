@@ -58,9 +58,39 @@ app.get('/medicine', (req, res) =>{
     })
 })
 
-app.get('/medicine/detail', (req, res)=>{
-    res.render('detail')
+app.get('/medicine/:id', (req, res)=>{
+    const id = req.params.id
+
+    fs.readFile('./data/medicines.json', (err, data) =>{
+        if (err){throw err}
+    
+        const medicines = JSON.parse(data)
+
+        const medicine = medicines.filter( medicine => medicine.id ==id)[0]
+
+        res.render('detail', {medicine: medicine})
+
+    })
 })
+
+app.get('/medicine/:id/delete', (req, res) =>{
+    const id = req.params.id
+    fs.readFile('./data/medicines.json', (err, data) =>{
+        if (err){throw err}
+    
+        const medicines = JSON.parse(data)
+
+        const filteredmeds = medicines.filter( medicine => medicine.id !=id)
+
+        fs.writeFile('./data/medicines.json',  JSON.stringify(filteredmeds), (err) =>{
+            if (err) {throw err}
+
+            res.render('medicine', {medicines: filteredmeds, deleted: true})
+        })
+    })
+})
+
+
 app.listen(PORT, err =>{
     if (err)
         console.log(err)

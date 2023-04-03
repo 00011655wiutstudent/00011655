@@ -3,8 +3,9 @@ extends layout.pug
 block content 
     .pagecontent 
         h1.medPage All Medicine 
-
+        if deleted 
+            p.success Deleted successfully
         each medicine in medicines
             .medicine-show
-                a.med(href=`/medicine/${medicine.name}`) #{medicine.name} 
-                a.delete(href="#") delete
+                a.med(href=`/medicine/${medicine.id}`) #{medicine.name} 
+                a.delete(href=`/medicine/${medicine.id}/delete`) delete
